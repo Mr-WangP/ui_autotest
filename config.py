@@ -13,7 +13,7 @@ class RunConfig:
     # cases_path = os.path.join(PRO_PATH, "test_dir", "")
 
     # 配置浏览器驱动类型(chrome/firefox/chrome-headless/firefox-headless)。
-    driver_type = "chrome-headless"
+    driver_type = "chrome"
 
     # 配置运行的 URL
     url = "https://www.cnblogs.com/"
