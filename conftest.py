@@ -1,6 +1,8 @@
 # coding=utf-8
 import os
 import pytest
+import logging
+import time
 from py.xml import html
 from selenium import webdriver
 from selenium.webdriver import Remote
@@ -23,12 +25,14 @@ def base_url():
 # 设置用例描述表头
 def pytest_html_results_table_header(cells):
     cells.insert(2, html.th('Description'))
+    cells.insert(3, html.th('Time', class_='sortable time', col='time'))
     cells.pop()
 
 
 # 设置用例描述表格
 def pytest_html_results_table_row(report, cells):
     cells.insert(2, html.td(report.description))
+    cells.insert(3, html.td(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), class_='col-time'))
     cells.pop()
 
 
@@ -156,6 +160,27 @@ def browser_close():
     yield driver
     driver.quit()
     print("test end!")
+
+
+def log():
+    # 创建一个日志器
+    logger = logging.getLogger('logger')
+    # 设置日志输出最低等级，低于当前等级就会忽略
+    logger.setLevel(logging.DEBUG)
+    if not logger.handlers:
+        # 创建处理器
+        sh = logging.StreamHandler()
+        fh = logging.FileHandler(filename='test_log/{}_log'.format(time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime()))
+                                 , encoding='utf-8')
+        # 创建一个格式器
+        formator = logging.Formatter(fmt='%(asctime)s %(filename)s %(levelname)s %(message)s',
+                                     datefmt='%Y/%m/%d/%X')
+        sh.setFormatter(formator)
+        fh.setFormatter(formator)
+        logger.addHandler(sh)
+        logger.addHandler(fh)
+
+    return logger
 
 
 if __name__ == "__main__":
