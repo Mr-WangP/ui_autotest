@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="DESKTOP-E95T6BV" name="pytest" skipped="0" tests="3" time="23.959" timestamp="2021-01-24T20:55:35.124713"><testcase classname="test_dir.test_blogs.TestBlogs" name="test_blog_login_case" time="10.819" /><testcase classname="test_dir.test_blogs.TestBlogs" name="test_blog_login_case2" time="6.971"><failure message="AssertionError: assert '用户登录 - 博客园' == '用户登录 - 博客园1'&#10;  - 用户登录 - 博客园1&#10;  ?           -&#10;  + 用户登录 - 博客园">self = &lt;test_dir.test_blogs.TestBlogs object at 0x000001BF6BA03788&gt;
+browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="364f668ebde75e98d00e63e5405fbfaf")&gt;
+base_url = 'https://www.cnblogs.com/'
+
+    def test_blog_login_case2(self, browser, base_url):
+        """
+        名称：博客园登陆测试
+        步骤：
+        1、打开博客园页面
+        2、点击登录
+        3、打开登录页面
+        检查点：
+        * 检查登录页面标题是否包含关键字。
+        """
+        page = BlogPage(browser)
+        page.get(base_url)
+        page.regist_element.is_displayed()
+        page.login_element.click()
+        page.login_title_element.is_displayed()
+&gt;       assert browser.title == "用户登录 - 博客园1"
+E       AssertionError: assert '用户登录 - 博客园' == '用户登录 - 博客园1'
+E         - 用户登录 - 博客园1
+E         ?           -
+E         + 用户登录 - 博客园
+
+test_dir\test_blogs.py:45: AssertionError</failure></testcase><testcase classname="test_dir.test_blogs.TestBlogsPage" name="test_blog_page_case" time="3.247" /></testsuite></testsuites>

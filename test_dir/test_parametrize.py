@@ -1,4 +1,4 @@
-
+# coding=utf-8
 import sys
 import json
 from time import sleep
@@ -29,7 +29,7 @@ def test_baidu_search1(name, search_key, browser, base_url):
 
 def get_data(file_path):
     """
-    读取参数化文件
+    读取json参数化文件
     :param file_path:
     :return:
     """

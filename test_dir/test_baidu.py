@@ -1,4 +1,4 @@
-
+# coding=utf-8
 import sys
 from time import sleep
 import pytest
@@ -57,6 +57,3 @@ class TestSearchSettings:
 
 if __name__ == '__main__':
     pytest.main(["-v", "-s", "test_baidu.py"])
-    # pytest.main(["-v", "-s", "test_baidu.py::TestSearch::test_baidu_search_case"])
-    # pytest.main(["-v", "-s", "test_baidu.py::TestSearch"])
-    # pytest.main(["-v", "-s", "test_baidu.py::TestSearchSettings"])

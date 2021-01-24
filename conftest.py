@@ -12,8 +12,8 @@ from config import RunConfig
 
 # 项目目录配置
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-REPORT_DIR = BASE_DIR + "/test_report/"
-LOG_DIR = BASE_DIR + "/test_log/"
+REPORT_DIR = os.path.join(BASE_DIR, "test_report", "")
+LOG_DIR = os.path.join(BASE_DIR, "test_log", "")
 
 
 # 定义基本测试环境
@@ -39,8 +39,8 @@ def pytest_html_results_table_row(report, cells):
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item):
     """
-    用于向测试用例中添加用例的开始时间、内部注释，和失败截图等.
-    :param item:
+    用于向测试用例报告中添加用例的开始时间、内部注释，和失败截图等.
+    :param item:测试用例对象
     """
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
@@ -80,7 +80,7 @@ def description_html(desc):
             desc_ = desc_ + ";"
         else:
             desc_ = desc_ + desc[i]
-    
+
     desc_lines = desc_.split(";")
     desc_html = html.html(
         html.head(
@@ -142,7 +142,7 @@ def browser():
         # 通过远程节点运行
         driver = Remote(command_executor='http://localhost:4444/wd/hub',
                         desired_capabilities={
-                              "browserName": "chrome",
+                            "browserName": "chrome",
                         })
         driver.set_window_size(1920, 1080)
 
@@ -170,8 +170,8 @@ def log():
     if not logger.handlers:
         # 创建处理器
         sh = logging.StreamHandler()
-        fh = logging.FileHandler(filename='test_log/{}_log'.format(time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime()))
-                                 , encoding='utf-8')
+        fh = logging.FileHandler(filename='{}\\{}_log'.format(
+            LOG_DIR, time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime())), encoding='utf-8')
         # 创建一个格式器
         formator = logging.Formatter(fmt='%(asctime)s %(filename)s %(levelname)s %(message)s',
                                      datefmt='%Y/%m/%d/%X')
@@ -184,4 +184,4 @@ def log():
 
 
 if __name__ == "__main__":
-    capture_screenshots("test_dir/test_baidu_search.test_search_python.png")
+    capture_screenshots("test_dir/test_baidu_search.png")

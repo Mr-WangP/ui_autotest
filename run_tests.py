@@ -1,16 +1,11 @@
 # coding=utf-8
 import os
 import time
-# import logging
 from conftest import log
 import pytest
 import click
 from conftest import REPORT_DIR
 from config import RunConfig
-
-# logging.basicConfig(filename='test_log/{}_log'.format(time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime())),
-#                     level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logger = logging.getLogger(__name__)
 
 '''
 说明：
@@ -33,7 +28,6 @@ def init_env(new_report):
 @click.option('-m', default=None, help='输入运行模式：run 或 debug.')
 def run(m):
     if m is None or m == "run":
-        # logger.info("回归模式，开始执行！")
         log().info("回归模式，开始执行！")
         now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         RunConfig.NEW_REPORT = os.path.join(REPORT_DIR, now_time)
@@ -47,7 +41,6 @@ def run(m):
                      "--maxfail", RunConfig.max_fail,
                      "--reruns", RunConfig.rerun,
                      "--reruns-delay", "2"])
-        # logger.info("运行结束，生成测试报告！")
         log().info("运行结束，生成测试报告！")
     elif m == "debug":
         print("debug模式，开始执行！")
