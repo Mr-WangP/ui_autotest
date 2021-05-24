@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_dir",
+    "children" : [ {
+      "name" : "test_blog_1",
+      "children" : [ {
+        "name" : "Test_Blogs_Page",
+        "children" : [ {
+          "name" : "test_blog_page_case",
+          "uid" : "820cf8bb6debdb10",
+          "parentUid" : "b0673059710dd4d85696c8615dc4e1b5",
+          "status" : "passed",
+          "time" : {
+            "start" : 1621835182212,
+            "stop" : 1621835183387,
+            "duration" : 1175
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "b0673059710dd4d85696c8615dc4e1b5"
+      } ],
+      "uid" : "d818ae6b785beddc205f30aed614fdcd"
+    } ],
+    "uid" : "0deb62a7421191a8a69ea1015ab6c56d"
+  } ]
+}

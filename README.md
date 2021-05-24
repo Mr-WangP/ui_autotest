@@ -1,2 +1,2 @@
 # ui_autotest
-python + selenium + pytest
+python + selenium + pytest + allure

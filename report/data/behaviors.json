@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "博客园首页",
+    "children" : [ {
+      "name" : "首页页面",
+      "children" : [ {
+        "name" : "test_blog_page_case",
+        "uid" : "820cf8bb6debdb10",
+        "parentUid" : "432a68b7a02a3db8ab8749e41199dc8e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1621835182212,
+          "stop" : 1621835183387,
+          "duration" : 1175
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "432a68b7a02a3db8ab8749e41199dc8e"
+    } ],
+    "uid" : "23f19002a8f4091d744befd38f9ee08e"
+  } ]
+}

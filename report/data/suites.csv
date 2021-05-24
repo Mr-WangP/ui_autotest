@@ -1,0 +1,9 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon May 24 13:46:22 CST 2021","Mon May 24 13:46:23 CST 2021","1175","test_dir","test_blog_1","Test_Blogs_Page","","","test_blog_page_case","
+        名称：博客园首页页面测试
+        步骤：
+        1、打开博客园页面
+        2、检查首页页面
+        检查点：
+        * 检查首页页面是否包含关键字。
+        "
