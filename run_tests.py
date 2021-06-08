@@ -12,7 +12,6 @@ from config import RunConfig
   > python run_tests.py
 '''
 
-
 def run():
     log().info("测试开始执行！")
     # now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
