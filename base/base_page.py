@@ -1,12 +1,17 @@
-# coding=utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/5/26 18:24
+# @File: base_page.py
+
 """
 此文件为selenium常用方法二次封装文件
 """
 import os
 from selenium.webdriver.common.action_chains import ActionChains  # 处理鼠标事件(高级操作)
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait  # 隐式等待
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
+from ui_autotest_3.conftest import log
 
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(0, base_path)
@@ -19,29 +24,44 @@ class BasePage(object):
     # 初始化基础类
     def __init__(self, driver, url=None):
         self.driver = driver
-        self.root_uri = url if url else getattr(self.driver, 'url', None)
-
-    def open(self, uri):
-        """
-        打开url.
-        用法:
-        driver.open()
-        """
-        root_uri = self.root_uri or ''
-        self.driver.get(root_uri + uri)
+        self.url = url if url else getattr(self.driver, 'url', None)
         self.driver.implicitly_wait(5)
 
-    def get_element(self, loc):
+    def open(self, url=None):
         """
-        判断元素定位方式，并返回元素
+        打开url
         """
-        return self.driver.find_element(*loc)
+        try:
+            url = url if url else self.url
+            self.driver.get(url)
+            log().info("成功打开url：{}".format(url))
+        except:
+            log().info("打开url：{}失败".format(url))
+            return False
 
-    def element_wait(self, loc, secs=5):
+    def get_url(self):
         """
-        等待元素显示，显示等待元素，消耗时间最短
+        获取当前页面的URL地址.
         """
-        WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located(self.get_element(loc)))
+        try:
+            uri = self.driver.current_url
+            log().info("成功获取当前页面url：{}".format(uri))
+            return uri
+        except:
+            log().info("获取当前页面url失败")
+            return False
+
+    def get_element(self, loc, timeout=10):
+        """
+        显示等待，并判断元素定位方式，并返回元素
+        """
+        try:
+            element = WebDriverWait(self.driver, timeout, 0.5).until(lambda x:x.find_element(*loc))
+            log().info("成功查找元素：{}".format(loc))
+            return element
+        except Exception as e:
+            log().info("元素：{}查找不到".format(loc))
+            return e
 
     def max_window(self):
         """
@@ -55,13 +75,6 @@ class BasePage(object):
         """
         self.driver.set_window_size(wide, high)
 
-    def send_value(self, loc, text):
-        """
-        操作输入框.
-        """
-        el = self.get_element(loc)
-        el.send_keys(text)
-
     def clear(self, loc):
         """
         清除输入框的内容.
@@ -69,10 +82,25 @@ class BasePage(object):
         el = self.get_element(loc)
         el.clear()
 
+    def send_value(self, loc, text):
+        """
+        操作输入框.
+        """
+        el = self.get_element(loc)
+        el.clear()
+        el.send_keys(text)
+
+    def get_text(self, loc):
+        """
+        获取元素文本
+        :return:
+        """
+        return self.get_element(loc).text
+
     def click(self, loc):
         """
         可以点击任何文本/图像
-        连接，复选框，单选按钮，甚至下拉框等等..
+        链接，复选框，单选按钮，甚至下拉框等等..
         """
         el = self.get_element(loc)
         el.click()
@@ -106,21 +134,15 @@ class BasePage(object):
         target = self.get_element(target_loc)
         ActionChains(self.driver).drag_and_drop(start, target).perform()
 
-    def click_text(self, text):
-        """
-        单击链接文本中的元素
-        """
-        self.driver.find_element_by_partial_link_text(text).click()
-
     def close(self):
         """
-        模拟用户在弹出框的标题栏中点击“关闭”按钮窗口或选项卡.
+        模拟用户在弹出框的标题栏中点击“关闭”按钮窗口
         """
         self.driver.close()
 
     def quit(self):
         """
-        关闭使用的所有窗口.
+        退出使用的所有窗口.
         """
         self.driver.quit()
 
@@ -131,7 +153,7 @@ class BasePage(object):
         el = self.get_element(loc)
         el.submit()
 
-    def F5(self):
+    def refresh(self):
         """
         刷新当前页面.
         """
@@ -151,16 +173,9 @@ class BasePage(object):
         el = self.get_element(loc)
         return el.get_attribute(attribute)
 
-    def get_text(self, loc):
-        """
-        获得元素文本信息
-        """
-        el = self.get_element(loc)
-        return el.text
-
     def get_display(self, loc):
         """
-        获取元素来显示，返回结果为真或假
+        获取元素是否显示，返回结果为真或假
         """
         el = self.get_element(loc)
         return el.is_displayed()
@@ -170,12 +185,6 @@ class BasePage(object):
         得到窗口标题.
         """
         return self.driver.title
-
-    def get_url(self):
-        """
-        获取当前页面的URL地址.
-        """
-        return self.driver.current_url
 
     def get_alert_text(self):
         """
@@ -228,20 +237,20 @@ class BasePage(object):
 
     def get_screen_shot(self, file_path):
         """
-        将当前窗口的屏幕截图保存到PNG图像文件中.
+        将当前窗口的屏幕截图保存到图像文件中.
         """
         self.driver.get_screenshot_as_file(file_path)
 
     def select_value(self, loc, value):
         """
-        通过value值选择
+        多选框，通过value值选择
         """
         el = self.get_element(loc)
         Select(el).select_by_value(value)
 
     def select_index(self, loc, index):
         """
-        通过index值选择
+        多选框，通过index值选择
         """
         el = self.get_element(loc)
         Select(el).select_by_index(index)

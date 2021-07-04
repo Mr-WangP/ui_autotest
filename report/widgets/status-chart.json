@@ -1,11 +1,61 @@
 [ {
-  "uid" : "820cf8bb6debdb10",
-  "name" : "test_blog_page_case",
+  "uid" : "adfb059cac6c034c",
+  "name" : "test_blog_login_case2[args1]",
   "time" : {
-    "start" : 1621835182212,
-    "stop" : 1621835183387,
-    "duration" : 1175
+    "start" : 1625398760344,
+    "stop" : 1625398760344,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "cafb6893afcb0a06",
+  "name" : "test_blog_login_case2[args2]",
+  "time" : {
+    "start" : 1625398760345,
+    "stop" : 1625398760345,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "903eeb6cd8314f4c",
+  "name" : "test_blog_login_case",
+  "time" : {
+    "start" : 1625398726410,
+    "stop" : 1625398760329,
+    "duration" : 33919
   },
   "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c3d0953e57ac7ce",
+  "name" : "test_blog_page_case1",
+  "time" : {
+    "start" : 1625398725720,
+    "stop" : 1625398726407,
+    "duration" : 687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "707b73194c7f4b8f",
+  "name" : "test_blog_login_case2[args0]",
+  "time" : {
+    "start" : 1625398760341,
+    "stop" : 1625398760342,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "51b5b942f36d0726",
+  "name" : "test_blog_page_case2",
+  "time" : {
+    "start" : 1625398722105,
+    "stop" : 1625398725464,
+    "duration" : 3359
+  },
+  "status" : "failed",
   "severity" : "normal"
 } ]

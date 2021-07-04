@@ -4,12 +4,12 @@
     "uid" : "0deb62a7421191a8a69ea1015ab6c56d",
     "name" : "test_dir",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
+      "skipped" : 3,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 1
+      "total" : 6
     }
   } ]
 }

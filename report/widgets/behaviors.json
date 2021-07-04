@@ -1,15 +1,26 @@
 {
-  "total" : 1,
+  "total" : 2,
   "items" : [ {
-    "uid" : "23f19002a8f4091d744befd38f9ee08e",
-    "name" : "博客园首页",
+    "uid" : "b71f764261166929f546233a5a441e1a",
+    "name" : "博客园首页测试",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 1,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
+    }
+  }, {
+    "uid" : "8ec76ba2762ce14c38729c97fc126685",
+    "name" : "博客园登录功能测试",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
     }
   } ]
 }

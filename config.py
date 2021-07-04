@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/5/26 18:24
+# @File: config.py
 
 import os
 
@@ -9,8 +14,8 @@ class RunConfig:
     运行测试配置
     """
     # 运行测试用例的目录或文件
-    cases_path = os.path.join(PRO_PATH, "test_dir", "test_blog_1.py")
-    # cases_path = os.path.join(PRO_PATH, "test_dir", "")
+    cases_path = os.path.join(PRO_PATH, "test_dir", "")
+    # cases_path = os.path.join(PRO_PATH, "test_dir", "test_blog_2.py")
 
     # 配置浏览器驱动类型(chrome/firefox/chrome-headless/firefox-headless)。
     driver_type = "chrome"

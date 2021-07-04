@@ -15,4 +15,6 @@ class LoginPage(BasePage):
 
     denglu_button = (By.XPATH, "//*[@fxlayout='column']/button")
 
+    tips_error = (By.XPATH, '//*[text()="用户名或密码错误"]')
+
     # 元素操作进行封装

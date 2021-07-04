@@ -1,6 +1,10 @@
-# coding=utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/5/26 18:24
+# @File: run_tests.py
+
 import os
-import time
 from conftest import log
 import pytest
 from config import RunConfig
@@ -13,11 +17,9 @@ from config import RunConfig
 '''
 
 def run():
-    log().info("测试开始执行！")
-    # now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
-    # RunConfig.NEW_REPORT = os.path.join(REPORT_DIR, now_time)
 
-    pytest.main(["-v", RunConfig.cases_path,
+    log().info("测试开始执行！")
+    pytest.main(["-vs", RunConfig.cases_path,
                  "--alluredir", './temp/',
                  "--clean-alluredir",
                  "--maxfail", RunConfig.max_fail,

@@ -1,4 +1,9 @@
-# coding=utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/5/26 18:24
+# @File: conftest.py
+
 import os
 import pytest
 import logging
@@ -54,6 +59,16 @@ def browser():
         firefox_options.headless = True
         driver = webdriver.Firefox(firefox_options=firefox_options)
 
+    elif RunConfig.driver_type == "grid":
+        # 通过远程节点分布式运行
+        caps = {
+            "browserName": "chrome",
+            "version": "",
+            "platform": "WINDOWS"
+        }
+        driver = webdriver.Remote('http://localhost:4444/wd/hub', caps)
+        driver.set_window_size(1920, 1080)
+
     else:
         raise NameError("driver驱动类型定义错误！")
 
@@ -94,12 +109,8 @@ def log():
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     '''
-    hook pytest失败
-    :param item:
-    :param call:
-    :return:
+    失败截图
     '''
-
     outcome = yield
     rep = outcome.get_result()
 

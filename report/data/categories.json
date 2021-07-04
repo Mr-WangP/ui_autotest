@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
+      "children" : [ {
+        "name" : "test_blog_page_case2",
+        "uid" : "51b5b942f36d0726",
+        "parentUid" : "61602c09817343f26191d945e95cac96",
+        "status" : "failed",
+        "time" : {
+          "start" : 1625398722105,
+          "stop" : 1625398725464,
+          "duration" : 3359
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "61602c09817343f26191d945e95cac96"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

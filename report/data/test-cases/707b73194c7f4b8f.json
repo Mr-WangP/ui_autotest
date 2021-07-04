@@ -1,0 +1,117 @@
+{
+  "uid" : "707b73194c7f4b8f",
+  "name" : "test_blog_login_case2[args0]",
+  "fullName" : "test_dir.test_blog_2.Test_Login_Blog#test_blog_login_case2",
+  "historyId" : "649684566542c50376ad41746b7bf2a1",
+  "time" : {
+    "start" : 1625398760341,
+    "stop" : 1625398760342,
+    "duration" : 1
+  },
+  "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园登陆测试\n    步骤：\n    1、打开博客园页面\n    2、点击登录\n    3、打开登录页面\n    4、输入用户名和密码\n    5、点击登录\n    检查点：\n    * 检查是否错误用户名密码导致登录失败。\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "Skipped: unconditional skip",
+  "statusTrace" : "('G:\\\\work_python\\\\ui_autotest\\\\test_dir\\\\test_blog_2.py', 43, 'Skipped: unconditional skip')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1625398716518,
+      "stop" : 1625398717764,
+      "duration" : 1246
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1625398717764,
+      "stop" : 1625398717764,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1625398760346,
+      "stop" : 1625398763412,
+      "duration" : 3066
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "博客园登录功能测试"
+  }, {
+    "name" : "story",
+    "value" : "登录测试"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Login_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "12340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "args",
+    "value" : "{'name': 123, 'password': 123456}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.skip" ]
+  },
+  "source" : "707b73194c7f4b8f.json",
+  "parameterValues" : [ "{'name': 123, 'password': 123456}" ]
+}
