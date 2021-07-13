@@ -1,5 +1,13 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"skipped","Sun Jul 04 19:39:20 CST 2021","Sun Jul 04 19:39:20 CST 2021","0","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args1]","
+"passed","Tue Jul 13 15:29:00 CST 2021","Tue Jul 13 15:29:00 CST 2021","291","test_dir","test_blog_1","Test_Blogs_Page","","","test_blog_page_case1","
+        名称：博客园首页页面测试
+        步骤：
+        1、打开博客园页面
+        2、检查首页页面
+        检查点：
+        * 检查首页页面是否包含关键字。
+        "
+"skipped","Tue Jul 13 15:29:33 CST 2021","Tue Jul 13 15:29:33 CST 2021","0","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args1]","
         名称：博客园登陆测试
         步骤：
         1、打开博客园页面
@@ -10,7 +18,15 @@
         检查点：
         * 检查是否错误用户名密码导致登录失败。
         "
-"skipped","Sun Jul 04 19:39:20 CST 2021","Sun Jul 04 19:39:20 CST 2021","0","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args2]","
+"failed","Tue Jul 13 15:28:56 CST 2021","Tue Jul 13 15:29:00 CST 2021","3603","test_dir","test_blog_1","Test_Blogs_Page","","","test_blog_page_case2","
+        名称：博客园首页页面测试
+        步骤：
+        1、打开博客园页面
+        2、检查首页页面
+        检查点：
+        * 检查首页页面是否包含关键字。
+        "
+"skipped","Tue Jul 13 15:29:33 CST 2021","Tue Jul 13 15:29:33 CST 2021","0","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args0]","
         名称：博客园登陆测试
         步骤：
         1、打开博客园页面
@@ -21,7 +37,7 @@
         检查点：
         * 检查是否错误用户名密码导致登录失败。
         "
-"passed","Sun Jul 04 19:38:46 CST 2021","Sun Jul 04 19:39:20 CST 2021","33919","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case","
+"broken","Tue Jul 13 15:29:19 CST 2021","Tue Jul 13 15:29:32 CST 2021","13800","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case","
         名称：博客园登陆测试
         步骤：
         1、打开博客园页面
@@ -30,15 +46,7 @@
         检查点：
         * 检查登录页面标题是否包含关键字。
         "
-"passed","Sun Jul 04 19:38:45 CST 2021","Sun Jul 04 19:38:46 CST 2021","687","test_dir","test_blog_1","Test_Blogs_Page","","","test_blog_page_case1","
-        名称：博客园首页页面测试
-        步骤：
-        1、打开博客园页面
-        2、检查首页页面
-        检查点：
-        * 检查首页页面是否包含关键字。
-        "
-"skipped","Sun Jul 04 19:39:20 CST 2021","Sun Jul 04 19:39:20 CST 2021","1","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args0]","
+"skipped","Tue Jul 13 15:29:33 CST 2021","Tue Jul 13 15:29:33 CST 2021","0","test_dir","test_blog_2","Test_Login_Blog","","","test_blog_login_case2[args2]","
         名称：博客园登陆测试
         步骤：
         1、打开博客园页面
@@ -48,12 +56,4 @@
         5、点击登录
         检查点：
         * 检查是否错误用户名密码导致登录失败。
-        "
-"failed","Sun Jul 04 19:38:42 CST 2021","Sun Jul 04 19:38:45 CST 2021","3359","test_dir","test_blog_1","Test_Blogs_Page","","","test_blog_page_case2","
-        名称：博客园首页页面测试
-        步骤：
-        1、打开博客园页面
-        2、检查首页页面
-        检查点：
-        * 检查首页页面是否包含关键字。
         "

@@ -7,26 +7,26 @@
       "name" : "test_blog_1",
       "children" : [ {
         "name" : "test_blog_page_case2",
-        "uid" : "51b5b942f36d0726",
+        "uid" : "90791d83d4ae8cbb",
         "parentUid" : "853ab7dd78c4ada11580f389c9ae4782",
         "status" : "failed",
         "time" : {
-          "start" : 1625398722105,
-          "stop" : 1625398725464,
-          "duration" : 3359
+          "start" : 1626161336450,
+          "stop" : 1626161340053,
+          "duration" : 3603
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_blog_page_case1",
-        "uid" : "7c3d0953e57ac7ce",
+        "uid" : "2856102e6f2a1a25",
         "parentUid" : "853ab7dd78c4ada11580f389c9ae4782",
         "status" : "passed",
         "time" : {
-          "start" : 1625398725720,
-          "stop" : 1625398726407,
-          "duration" : 687
+          "start" : 1626161340382,
+          "stop" : 1626161340673,
+          "duration" : 291
         },
         "flaky" : false,
         "newFailed" : false,
@@ -37,38 +37,38 @@
       "name" : "test_blog_2",
       "children" : [ {
         "name" : "test_blog_login_case",
-        "uid" : "903eeb6cd8314f4c",
+        "uid" : "c58facbe07392ed2",
         "parentUid" : "0370a7bab8526b52514a6da4e4c34960",
-        "status" : "passed",
+        "status" : "broken",
         "time" : {
-          "start" : 1625398726410,
-          "stop" : 1625398760329,
-          "duration" : 33919
+          "start" : 1626161359059,
+          "stop" : 1626161372859,
+          "duration" : 13800
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_blog_login_case2[args0]",
-        "uid" : "707b73194c7f4b8f",
+        "uid" : "5cccd590c7ecb77f",
         "parentUid" : "0370a7bab8526b52514a6da4e4c34960",
         "status" : "skipped",
         "time" : {
-          "start" : 1625398760341,
-          "stop" : 1625398760342,
-          "duration" : 1
+          "start" : 1626161373079,
+          "stop" : 1626161373079,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "{'name': 123, 'password': 123456}" ]
       }, {
         "name" : "test_blog_login_case2[args1]",
-        "uid" : "adfb059cac6c034c",
+        "uid" : "48a927d7dc1dcee6",
         "parentUid" : "0370a7bab8526b52514a6da4e4c34960",
         "status" : "skipped",
         "time" : {
-          "start" : 1625398760344,
-          "stop" : 1625398760344,
+          "start" : 1626161373080,
+          "stop" : 1626161373080,
           "duration" : 0
         },
         "flaky" : false,
@@ -76,12 +76,12 @@
         "parameters" : [ "{'name': 'aaa', 'password': 'aaabbb'}" ]
       }, {
         "name" : "test_blog_login_case2[args2]",
-        "uid" : "cafb6893afcb0a06",
+        "uid" : "e82f6f0419e446f6",
         "parentUid" : "0370a7bab8526b52514a6da4e4c34960",
         "status" : "skipped",
         "time" : {
-          "start" : 1625398760345,
-          "stop" : 1625398760345,
+          "start" : 1626161373082,
+          "stop" : 1626161373082,
           "duration" : 0
         },
         "flaky" : false,

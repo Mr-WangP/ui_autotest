@@ -1,0 +1,241 @@
+{
+  "uid" : "c58facbe07392ed2",
+  "name" : "test_blog_login_case",
+  "fullName" : "test_dir.test_blog_2.Test_Login_Blog#test_blog_login_case",
+  "historyId" : "d7c3323d59879b500c59c2f0b5250898",
+  "time" : {
+    "start" : 1626161359059,
+    "stop" : 1626161372859,
+    "duration" : 13800
+  },
+  "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        检查点：\n        * 检查登录页面标题是否包含关键字。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园登陆测试\n    步骤：\n    1、打开博客园页面\n    2、点击登录\n    3、打开登录页面\n    检查点：\n    * 检查登录页面标题是否包含关键字。\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'TimeoutException' object has no attribute 'is_displayed'",
+  "statusTrace" : "self = <test_dir.test_blog_2.Test_Login_Blog object at 0x000001D7B6A213C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"30ad0e38e1e85b601507f58f64407631\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('登录页面测试')\n    def test_blog_login_case(self, browser, base_url):\n        \"\"\"\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        检查点：\n        * 检查登录页面标题是否包含关键字。\n        \"\"\"\n        lp = LoginPage(browser)\n        with allure.step('打开url'):\n            lp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            lp.get_display(lp.login_element)\n        with allure.step('进入登录页面'):\n            lp.click(lp.login_element)\n        with allure.step('等待登录页面显示'):\n>           lp.get_display(lp.login_title_element)\n\ntest_dir\\test_blog_2.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <page.login_page.LoginPage object at 0x000001D7B69D0A48>\nloc = ('xpath', \"//div[text()='博客园用户登录']\")\n\n    def get_display(self, loc):\n        \"\"\"\n        获取元素是否显示，返回结果为真或假\n        \"\"\"\n        el = self.get_element(loc)\n>       return el.is_displayed()\nE       AttributeError: 'TimeoutException' object has no attribute 'is_displayed'\n\nbase\\base_page.py:181: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1626161329129,
+      "stop" : 1626161329129,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1626161327808,
+      "stop" : 1626161329129,
+      "duration" : 1321
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1626161359059,
+      "stop" : 1626161359059,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        检查点：\n        * 检查登录页面标题是否包含关键字。\n        ",
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'TimeoutException' object has no attribute 'is_displayed'",
+    "statusTrace" : "self = <test_dir.test_blog_2.Test_Login_Blog object at 0x000001D7B6A213C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"30ad0e38e1e85b601507f58f64407631\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('登录页面测试')\n    def test_blog_login_case(self, browser, base_url):\n        \"\"\"\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        检查点：\n        * 检查登录页面标题是否包含关键字。\n        \"\"\"\n        lp = LoginPage(browser)\n        with allure.step('打开url'):\n            lp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            lp.get_display(lp.login_element)\n        with allure.step('进入登录页面'):\n            lp.click(lp.login_element)\n        with allure.step('等待登录页面显示'):\n>           lp.get_display(lp.login_title_element)\n\ntest_dir\\test_blog_2.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <page.login_page.LoginPage object at 0x000001D7B69D0A48>\nloc = ('xpath', \"//div[text()='博客园用户登录']\")\n\n    def get_display(self, loc):\n        \"\"\"\n        获取元素是否显示，返回结果为真或假\n        \"\"\"\n        el = self.get_element(loc)\n>       return el.is_displayed()\nE       AttributeError: 'TimeoutException' object has no attribute 'is_displayed'\n\nbase\\base_page.py:181: AttributeError",
+    "steps" : [ {
+      "name" : "打开url",
+      "time" : {
+        "start" : 1626161359061,
+        "stop" : 1626161361554,
+        "duration" : 2493
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "等待首页页面显示",
+      "time" : {
+        "start" : 1626161361554,
+        "stop" : 1626161361566,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "进入登录页面",
+      "time" : {
+        "start" : 1626161361566,
+        "stop" : 1626161361780,
+        "duration" : 214
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "等待登录页面显示",
+      "time" : {
+        "start" : 1626161361780,
+        "stop" : 1626161372859,
+        "duration" : 11079
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'TimeoutException' object has no attribute 'is_displayed'\n",
+      "statusTrace" : "  File \"G:\\work_python\\ui_autotest\\test_dir\\test_blog_2.py\", line 39, in test_blog_login_case\n    lp.get_display(lp.login_title_element)\n  File \"G:\\work_python\\ui_autotest\\base\\base_page.py\", line 181, in get_display\n    return el.is_displayed()\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "添加失败截图...",
+      "time" : {
+        "start" : 1626161372866,
+        "stop" : 1626161373076,
+        "duration" : 210
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "2b53630c7382cd70",
+        "name" : "失败截图",
+        "source" : "2b53630c7382cd70.png",
+        "type" : "image/png",
+        "size" : 45164
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "335a5301b38d4f47",
+      "name" : "log",
+      "source" : "335a5301b38d4f47.txt",
+      "type" : "text/plain",
+      "size" : 765
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 5
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1626161373082,
+      "stop" : 1626161375205,
+      "duration" : 2123
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "博客园登录功能测试"
+  }, {
+    "name" : "story",
+    "value" : "登录页面测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Login_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2500-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "aa6a8a2d05be2b4",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'TimeoutException' object has no attribute 'is_displayed'",
+      "time" : {
+        "start" : 1626161340676,
+        "stop" : 1626161356831,
+        "duration" : 16155
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c58facbe07392ed2.json",
+  "parameterValues" : [ ]
+}

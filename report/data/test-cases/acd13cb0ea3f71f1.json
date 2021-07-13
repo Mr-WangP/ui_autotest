@@ -1,63 +1,63 @@
 {
-  "uid" : "b69c336e18cd85e4",
+  "uid" : "acd13cb0ea3f71f1",
   "name" : "test_blog_page_case2",
   "fullName" : "test_dir.test_blog_1.Test_Blogs_Page#test_blog_page_case2",
   "historyId" : "7894e90db032035cea3a0c8a9f3941d5",
   "time" : {
-    "start" : 1625398717765,
-    "stop" : 1625398719749,
-    "duration" : 1984
+    "start" : 1626161329144,
+    "stop" : 1626161334105,
+    "duration" : 4961
   },
   "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
   "descriptionHtml" : "<pre><code>    名称：博客园首页页面测试\n    步骤：\n    1、打开博客园页面\n    2、检查首页页面\n    检查点：\n    * 检查首页页面是否包含关键字。\n</code></pre>\n",
   "status" : "failed",
   "statusMessage" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
-  "statusTrace" : "self = <test_dir.test_blog_1.Test_Blogs_Page object at 0x000002A72DF9A188>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"08f4e19f425e9df55958911608289a65\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser, base_url):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            bp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n>           assert browser.title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_1.py:52: AssertionError",
+  "statusTrace" : "self = <test_dir.test_blog_1.Test_Blogs_Page object at 0x000001D7B69569C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"30ad0e38e1e85b601507f58f64407631\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser, base_url):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            bp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n>           assert browser.title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_1.py:52: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "browser",
+    "name" : "browser_close",
     "time" : {
-      "start" : 1625398716518,
-      "stop" : 1625398717764,
-      "duration" : 1246
+      "start" : 1626161329129,
+      "stop" : 1626161329129,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1626161327808,
+      "stop" : 1626161329129,
+      "duration" : 1321
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   }, {
     "name" : "base_url",
     "time" : {
-      "start" : 1625398717764,
-      "stop" : 1625398717764,
+      "start" : 1626161329129,
+      "stop" : 1626161329129,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "browser_close",
-    "time" : {
-      "start" : 1625398717764,
-      "stop" : 1625398717764,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
     "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0,
     "hasContent" : false,
     "stepsCount" : 0
   } ],
@@ -65,43 +65,43 @@
     "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
     "status" : "failed",
     "statusMessage" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
-    "statusTrace" : "self = <test_dir.test_blog_1.Test_Blogs_Page object at 0x000002A72DF9A188>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"08f4e19f425e9df55958911608289a65\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser, base_url):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            bp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n>           assert browser.title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_1.py:52: AssertionError",
+    "statusTrace" : "self = <test_dir.test_blog_1.Test_Blogs_Page object at 0x000001D7B69569C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"30ad0e38e1e85b601507f58f64407631\")>\nbase_url = 'https://www.cnblogs.com/'\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser, base_url):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            bp.open(base_url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n>           assert browser.title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_1.py:52: AssertionError",
     "steps" : [ {
       "name" : "打开url",
       "time" : {
-        "start" : 1625398717766,
-        "stop" : 1625398719724,
-        "duration" : 1958
+        "start" : 1626161329146,
+        "stop" : 1626161334079,
+        "duration" : 4933
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
       "hasContent" : false,
       "stepsCount" : 0
     }, {
       "name" : "等待首页页面显示",
       "time" : {
-        "start" : 1625398719724,
-        "stop" : 1625398719744,
-        "duration" : 20
+        "start" : 1626161334079,
+        "stop" : 1626161334100,
+        "duration" : 21
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
       "hasContent" : false,
       "stepsCount" : 0
     }, {
       "name" : "判断显示是否正确",
       "time" : {
-        "start" : 1625398719744,
-        "stop" : 1625398719748,
-        "duration" : 4
+        "start" : 1626161334100,
+        "stop" : 1626161334105,
+        "duration" : 5
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园\n",
@@ -109,58 +109,58 @@
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : true,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
       "hasContent" : true,
       "stepsCount" : 0
     }, {
       "name" : "添加失败截图...",
       "time" : {
-        "start" : 1625398719798,
-        "stop" : 1625398720087,
-        "duration" : 289
+        "start" : 1626161334159,
+        "stop" : 1626161334439,
+        "duration" : 280
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "68d03b636708291a",
+        "uid" : "d2123ac3c95c931c",
         "name" : "失败截图",
-        "source" : "68d03b636708291a.png",
+        "source" : "d2123ac3c95c931c.png",
         "type" : "image/png",
-        "size" : 460311
+        "size" : 522655
       } ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
       "hasContent" : true,
       "stepsCount" : 0
     } ],
     "attachments" : [ {
-      "uid" : "7fedcf26ed0b765f",
+      "uid" : "cc7f0f157c413548",
       "name" : "log",
-      "source" : "7fedcf26ed0b765f.txt",
+      "source" : "cc7f0f157c413548.txt",
       "type" : "text/plain",
       "size" : 176
     } ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : true,
     "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
     "hasContent" : true,
     "stepsCount" : 4
   },
   "afterStages" : [ {
     "name" : "browser_close::0",
     "time" : {
-      "start" : 1625398760346,
-      "stop" : 1625398763412,
-      "duration" : 3066
+      "start" : 1626161373082,
+      "stop" : 1626161375205,
+      "duration" : 2123
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   } ],
@@ -187,7 +187,7 @@
     "value" : "WP"
   }, {
     "name" : "thread",
-    "value" : "12340-MainThread"
+    "value" : "2500-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -209,6 +209,6 @@
     "categories" : [ ],
     "tags" : [ "run(order=1)" ]
   },
-  "source" : "b69c336e18cd85e4.json",
+  "source" : "acd13cb0ea3f71f1.json",
   "parameterValues" : [ ]
 }

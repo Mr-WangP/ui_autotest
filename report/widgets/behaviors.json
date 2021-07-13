@@ -16,9 +16,9 @@
     "name" : "博客园登录功能测试",
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 1,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 2
     }

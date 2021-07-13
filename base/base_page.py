@@ -11,7 +11,7 @@ import os
 from selenium.webdriver.common.action_chains import ActionChains  # 处理鼠标事件(高级操作)
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
-from ui_autotest_3.conftest import log
+from conftest import log
 
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(0, base_path)
@@ -36,7 +36,7 @@ class BasePage(object):
             self.driver.get(url)
             log().info("成功打开url：{}".format(url))
         except:
-            log().info("打开url：{}失败".format(url))
+            log().error("打开url：{}失败".format(url))
             return False
 
     def get_url(self):
@@ -48,7 +48,7 @@ class BasePage(object):
             log().info("成功获取当前页面url：{}".format(uri))
             return uri
         except:
-            log().info("获取当前页面url失败")
+            log().error("获取当前页面url失败")
             return False
 
     def get_element(self, loc, timeout=10):
@@ -60,7 +60,7 @@ class BasePage(object):
             log().info("成功查找元素：{}".format(loc))
             return element
         except Exception as e:
-            log().info("元素：{}查找不到".format(loc))
+            log().error("元素：{}查找不到".format(loc))
             return e
 
     def max_window(self):

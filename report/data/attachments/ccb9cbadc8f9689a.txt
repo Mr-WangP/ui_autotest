@@ -1,4 +1,4 @@
 INFO     logger:base_page.py:37 成功打开url：https://www.cnblogs.com/
 INFO     logger:base_page.py:60 成功查找元素：('xpath', "//*[@id='navbar_login_status']/a[5]")
 INFO     logger:base_page.py:60 成功查找元素：('xpath', "//*[@id='navbar_login_status']/a[5]")
-INFO     logger:base_page.py:60 成功查找元素：('xpath', "//div[text()='博客园用户登录']")
+INFO     logger:base_page.py:63 元素：('xpath', "//div[text()='博客园用户登录']")查找不到

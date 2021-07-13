@@ -7,13 +7,13 @@
       "name" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
       "children" : [ {
         "name" : "test_blog_page_case2",
-        "uid" : "51b5b942f36d0726",
+        "uid" : "90791d83d4ae8cbb",
         "parentUid" : "61602c09817343f26191d945e95cac96",
         "status" : "failed",
         "time" : {
-          "start" : 1625398722105,
-          "stop" : 1625398725464,
-          "duration" : 3359
+          "start" : 1626161336450,
+          "stop" : 1626161340053,
+          "duration" : 3603
         },
         "flaky" : false,
         "newFailed" : false,
@@ -22,5 +22,26 @@
       "uid" : "61602c09817343f26191d945e95cac96"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'TimeoutException' object has no attribute 'is_displayed'",
+      "children" : [ {
+        "name" : "test_blog_login_case",
+        "uid" : "c58facbe07392ed2",
+        "parentUid" : "2247258e418ab053df47c581e64d643f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1626161359059,
+          "stop" : 1626161372859,
+          "duration" : 13800
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2247258e418ab053df47c581e64d643f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
 }

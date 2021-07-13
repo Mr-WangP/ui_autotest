@@ -1,12 +1,12 @@
 {
-  "uid" : "7c3d0953e57ac7ce",
+  "uid" : "2856102e6f2a1a25",
   "name" : "test_blog_page_case1",
   "fullName" : "test_dir.test_blog_1.Test_Blogs_Page#test_blog_page_case1",
   "historyId" : "57befcff543e01f9c6fe7c365661266e",
   "time" : {
-    "start" : 1625398725720,
-    "stop" : 1625398726407,
-    "duration" : 687
+    "start" : 1626161340382,
+    "stop" : 1626161340673,
+    "duration" : 291
   },
   "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
   "descriptionHtml" : "<pre><code>    名称：博客园首页页面测试\n    步骤：\n    1、打开博客园页面\n    2、检查首页页面\n    检查点：\n    * 检查首页页面是否包含关键字。\n</code></pre>\n",
@@ -14,48 +14,48 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "base_url",
+    "name" : "browser_close",
     "time" : {
-      "start" : 1625398725720,
-      "stop" : 1625398725720,
+      "start" : 1626161329129,
+      "stop" : 1626161329129,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   }, {
     "name" : "browser",
     "time" : {
-      "start" : 1625398716518,
-      "stop" : 1625398717764,
-      "duration" : 1246
+      "start" : 1626161327808,
+      "stop" : 1626161329129,
+      "duration" : 1321
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   }, {
-    "name" : "browser_close",
+    "name" : "base_url",
     "time" : {
-      "start" : 1625398717764,
-      "stop" : 1625398717764,
+      "start" : 1626161340382,
+      "stop" : 1626161340382,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   } ],
@@ -65,75 +65,75 @@
     "steps" : [ {
       "name" : "打开url",
       "time" : {
-        "start" : 1625398725721,
-        "stop" : 1625398726393,
-        "duration" : 672
+        "start" : 1626161340383,
+        "stop" : 1626161340659,
+        "duration" : 276
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
       "hasContent" : false,
       "stepsCount" : 0
     }, {
       "name" : "等待首页页面显示",
       "time" : {
-        "start" : 1625398726393,
-        "stop" : 1625398726405,
+        "start" : 1626161340660,
+        "stop" : 1626161340672,
         "duration" : 12
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
       "hasContent" : false,
       "stepsCount" : 0
     }, {
       "name" : "判断显示是否正确",
       "time" : {
-        "start" : 1625398726405,
-        "stop" : 1625398726407,
-        "duration" : 2
+        "start" : 1626161340672,
+        "stop" : 1626161340673,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
       "hasContent" : false,
       "stepsCount" : 0
     } ],
     "attachments" : [ {
-      "uid" : "37206de5162bd4c4",
+      "uid" : "6338602797f890a4",
       "name" : "log",
-      "source" : "37206de5162bd4c4.txt",
+      "source" : "6338602797f890a4.txt",
       "type" : "text/plain",
       "size" : 176
     } ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
     "hasContent" : true,
     "stepsCount" : 3
   },
   "afterStages" : [ {
     "name" : "browser_close::0",
     "time" : {
-      "start" : 1625398760346,
-      "stop" : 1625398763412,
-      "duration" : 3066
+      "start" : 1626161373082,
+      "stop" : 1626161375205,
+      "duration" : 2123
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
     "hasContent" : false,
     "stepsCount" : 0
   } ],
@@ -160,7 +160,7 @@
     "value" : "WP"
   }, {
     "name" : "thread",
-    "value" : "12340-MainThread"
+    "value" : "2500-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -184,6 +184,6 @@
     "categories" : [ ],
     "tags" : [ "run(order=2)" ]
   },
-  "source" : "7c3d0953e57ac7ce.json",
+  "source" : "2856102e6f2a1a25.json",
   "parameterValues" : [ ]
 }
