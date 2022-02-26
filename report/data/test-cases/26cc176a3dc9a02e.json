@@ -1,0 +1,192 @@
+{
+  "uid" : "26cc176a3dc9a02e",
+  "name" : "test_blog_login_case2[args1]",
+  "fullName" : "test_dir.test_blog_login.Test_Login_Blog#test_blog_login_case2",
+  "historyId" : "16bb169071ebd73570a54507e2f8dcf2",
+  "time" : {
+    "start" : 1645858786801,
+    "stop" : 1645858787891,
+    "duration" : 1090
+  },
+  "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园登陆测试\n    步骤：\n    1、打开博客园页面\n    2、点击登录\n    3、打开登录页面\n    4、输入用户名和密码\n    5、点击登录\n    检查点：\n    * 检查是否错误用户名密码导致登录失败。\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858780942,
+      "duration" : 2077
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1645858780942,
+      "stop" : 1645858780942,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "进行登录操作",
+      "time" : {
+        "start" : 1645858786802,
+        "stop" : 1645858787296,
+        "duration" : 494
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "页面错误用户名或密码提示",
+      "time" : {
+        "start" : 1645858787296,
+        "stop" : 1645858787891,
+        "duration" : 595
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "a4ba6bc7b731bfde",
+      "name" : "log",
+      "source" : "a4ba6bc7b731bfde.txt",
+      "type" : "text/plain",
+      "size" : 1186
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1645858816129,
+      "stop" : 1645858818257,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "错误用户登录测试"
+  }, {
+    "name" : "feature",
+    "value" : "博客园登录功能测试"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Login_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2468-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "args",
+    "value" : "{'name': 'aaa666', 'password': 'aaabbb'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "login" ]
+  },
+  "source" : "26cc176a3dc9a02e.json",
+  "parameterValues" : [ "{'name': 'aaa666', 'password': 'aaabbb'}" ]
+}

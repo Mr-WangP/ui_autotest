@@ -1,0 +1,3 @@
+INFO     logger:base_page.py:35 ✅ 打开url：https://www.cnblogs.com/
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='navbar_login_status']/a[4] 
+INFO     logger:base_page.py:236 ✅ 元素已显示：xpath=//*[@id='navbar_login_status']/a[4]

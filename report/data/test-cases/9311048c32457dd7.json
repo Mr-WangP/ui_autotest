@@ -1,0 +1,217 @@
+{
+  "uid" : "9311048c32457dd7",
+  "name" : "test_blog_login_case2[args2]",
+  "fullName" : "test_dir.test_blog_login.Test_Login_Blog#test_blog_login_case2",
+  "historyId" : "da97856447a9bec88c5391f9c3f11c02",
+  "time" : {
+    "start" : 1645858787894,
+    "stop" : 1645858799408,
+    "duration" : 11514
+  },
+  "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园登陆测试\n    步骤：\n    1、打开博客园页面\n    2、点击登录\n    3、打开登录页面\n    4、输入用户名和密码\n    5、点击登录\n    检查点：\n    * 检查是否错误用户名密码导致登录失败。\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert AttributeError(\"'TimeoutException' object has no attribute 'is_displayed'\") is True",
+  "statusTrace" : "self = <test_dir.test_blog_login.Test_Login_Blog object at 0x000002012E50C148>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c762a1c5c9631f7292aadcbf913c3f53\")>\nargs = {'name': 'aaa123', 'password': 'aaabbb'}\n\n    @allure.story('错误用户登录测试')\n    @pytest.mark.login\n    @pytest.mark.parametrize('args', YamlUtil(RunConfig.data_path + '/login_file.yaml').read_yaml())\n    def test_blog_login_case2(self, browser, args):\n        \"\"\"\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        \"\"\"\n        lp = LoginPage(browser)\n        with allure.step('进行登录操作'):\n            lp.login(args)\n        with allure.step('页面错误用户名或密码提示'):\n            # 这里需要处理滑块验证\n            txt = lp.get_display(lp.tips_error)\n>           assert txt is True\nE           assert AttributeError(\"'TimeoutException' object has no attribute 'is_displayed'\") is True\n\ntest_dir\\test_blog_login.py:40: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858780942,
+      "duration" : 2077
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1645858780942,
+      "stop" : 1645858780942,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert AttributeError(\"'TimeoutException' object has no attribute 'is_displayed'\") is True",
+    "statusTrace" : "self = <test_dir.test_blog_login.Test_Login_Blog object at 0x000002012E50C148>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c762a1c5c9631f7292aadcbf913c3f53\")>\nargs = {'name': 'aaa123', 'password': 'aaabbb'}\n\n    @allure.story('错误用户登录测试')\n    @pytest.mark.login\n    @pytest.mark.parametrize('args', YamlUtil(RunConfig.data_path + '/login_file.yaml').read_yaml())\n    def test_blog_login_case2(self, browser, args):\n        \"\"\"\n        名称：博客园登陆测试\n        步骤：\n        1、打开博客园页面\n        2、点击登录\n        3、打开登录页面\n        4、输入用户名和密码\n        5、点击登录\n        检查点：\n        * 检查是否错误用户名密码导致登录失败。\n        \"\"\"\n        lp = LoginPage(browser)\n        with allure.step('进行登录操作'):\n            lp.login(args)\n        with allure.step('页面错误用户名或密码提示'):\n            # 这里需要处理滑块验证\n            txt = lp.get_display(lp.tips_error)\n>           assert txt is True\nE           assert AttributeError(\"'TimeoutException' object has no attribute 'is_displayed'\") is True\n\ntest_dir\\test_blog_login.py:40: AssertionError",
+    "steps" : [ {
+      "name" : "进行登录操作",
+      "time" : {
+        "start" : 1645858787894,
+        "stop" : 1645858788363,
+        "duration" : 469
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "页面错误用户名或密码提示",
+      "time" : {
+        "start" : 1645858788363,
+        "stop" : 1645858799408,
+        "duration" : 11045
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert AttributeError(\"'TimeoutException' object has no attribute 'is_displayed'\") is True\n",
+      "statusTrace" : "  File \"G:\\work_python\\ui_autotest_3\\test_dir\\test_blog_login.py\", line 40, in test_blog_login_case2\n    assert txt is True\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    }, {
+      "name" : "添加失败截图...",
+      "time" : {
+        "start" : 1645858799412,
+        "stop" : 1645858799609,
+        "duration" : 197
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5f9eb20eb82ca1f1",
+        "name" : "失败截图",
+        "source" : "5f9eb20eb82ca1f1.png",
+        "type" : "image/png",
+        "size" : 43977
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "d1c884740cc58264",
+      "name" : "log",
+      "source" : "d1c884740cc58264.txt",
+      "type" : "text/plain",
+      "size" : 1087
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1645858816129,
+      "stop" : 1645858818257,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "错误用户登录测试"
+  }, {
+    "name" : "feature",
+    "value" : "博客园登录功能测试"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Login_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2468-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "args",
+    "value" : "{'name': 'aaa123', 'password': 'aaabbb'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "login" ]
+  },
+  "source" : "9311048c32457dd7.json",
+  "parameterValues" : [ "{'name': 'aaa123', 'password': 'aaabbb'}" ]
+}

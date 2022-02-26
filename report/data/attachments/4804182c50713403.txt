@@ -1,0 +1,11 @@
+INFO     logger:base_page.py:35 ✅ 打开url：https://zzk.cnblogs.com/
+INFO     logger:base_page.py:62 ✅ 查找到元素：id=w 
+INFO     logger:base_page.py:236 ✅ 元素已显示：id=w 
+INFO     logger:base_page.py:62 ✅ 查找到元素：id=w 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：selenium
+INFO     logger:base_page.py:62 ✅ 查找到元素：id=search_btn 
+INFO     logger:base_page.py:128 ✅ 点击元素：id=search_btn 
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id="searchResult"]/div[2]/div[1]/h3/a 
+INFO     logger:base_page.py:117 ✅ 获取元素的文本为：java selenium (一) selenium 介绍
+INFO     logger:test_blog_search.py:38 ✅ 断言成功：成功搜索java selenium (一) selenium 介绍

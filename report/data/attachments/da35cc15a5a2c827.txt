@@ -1,0 +1,4 @@
+INFO     logger:base_page.py:35 ✅ 打开url：https://www.cnblogs.com/
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='navbar_login_status']/a[4] 
+INFO     logger:base_page.py:236 ✅ 元素已显示：xpath=//*[@id='navbar_login_status']/a[4] 
+INFO     logger:test_blog_home.py:37 ✅ 断言成功：博客园 - 开发者的网上家园 == "博客园 - 开发者的网上家园"

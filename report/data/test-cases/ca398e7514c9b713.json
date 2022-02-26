@@ -1,0 +1,237 @@
+{
+  "uid" : "ca398e7514c9b713",
+  "name" : "test_blog_page_case2",
+  "fullName" : "test_dir.test_blog_home.Test_Home_Blog#test_blog_page_case2",
+  "historyId" : "244805c7da1185d41124941f464167b8",
+  "time" : {
+    "start" : 1645858780944,
+    "stop" : 1645858782999,
+    "duration" : 2055
+  },
+  "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园首页页面测试\n    步骤：\n    1、打开博客园页面\n    2、检查首页页面\n    检查点：\n    * 检查首页页面是否包含关键字。\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL 标记为预期失败\n\nAssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
+  "statusTrace" : "self = <test_dir.test_blog_home.Test_Home_Blog object at 0x000002012E4929C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c762a1c5c9631f7292aadcbf913c3f53\")>\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.home\n    @pytest.mark.xfail(condition=True, reason='标记为预期失败')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            print(bp.url)\n            bp.open(bp.url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n            title = browser.title\n>           assert title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_home.py:60: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858780942,
+      "duration" : 2077
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1645858780942,
+      "stop" : 1645858780942,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL 标记为预期失败\n\nAssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园",
+    "statusTrace" : "self = <test_dir.test_blog_home.Test_Home_Blog object at 0x000002012E4929C8>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c762a1c5c9631f7292aadcbf913c3f53\")>\n\n    @allure.story('首页页面显示错误测试')\n    @pytest.mark.home\n    @pytest.mark.xfail(condition=True, reason='标记为预期失败')\n    @pytest.mark.run(order=1)\n    def test_blog_page_case2(self, browser):\n        \"\"\"\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        \"\"\"\n        bp = BlogPage(browser)\n        with allure.step('打开url'):\n            print(bp.url)\n            bp.open(bp.url)\n        with allure.step('等待首页页面显示'):\n            bp.get_display(bp.regist_element)\n        with allure.step('判断显示是否正确'):\n            title = browser.title\n>           assert title == \"博客园1 - 开发者的网上家园\"\nE           AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\nE             - 博客园1 - 开发者的网上家园\nE             ?    -\nE             + 博客园 - 开发者的网上家园\n\ntest_dir\\test_blog_home.py:60: AssertionError",
+    "steps" : [ {
+      "name" : "打开url",
+      "time" : {
+        "start" : 1645858780945,
+        "stop" : 1645858782979,
+        "duration" : 2034
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "等待首页页面显示",
+      "time" : {
+        "start" : 1645858782979,
+        "stop" : 1645858782996,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "判断显示是否正确",
+      "time" : {
+        "start" : 1645858782996,
+        "stop" : 1645858782999,
+        "duration" : 3
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert '博客园 - 开发者的网上家园' == '博客园1 - 开发者的网上家园'\n  - 博客园1 - 开发者的网上家园\n  ?    -\n  + 博客园 - 开发者的网上家园\n",
+      "statusTrace" : "  File \"G:\\work_python\\ui_autotest_3\\test_dir\\test_blog_home.py\", line 60, in test_blog_page_case2\n    assert title == \"博客园1 - 开发者的网上家园\"\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    }, {
+      "name" : "添加失败截图...",
+      "time" : {
+        "start" : 1645858783046,
+        "stop" : 1645858783320,
+        "duration" : 274
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8e134f8452b49587",
+        "name" : "失败截图",
+        "source" : "8e134f8452b49587.png",
+        "type" : "image/png",
+        "size" : 450851
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "faae770d8c6e968d",
+      "name" : "log",
+      "source" : "faae770d8c6e968d.txt",
+      "type" : "text/plain",
+      "size" : 266
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1645858816129,
+      "stop" : 1645858818257,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "博客园首页测试"
+  }, {
+    "name" : "story",
+    "value" : "首页页面显示错误测试"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(condition=True, reason='标记为预期失败')"
+  }, {
+    "name" : "tag",
+    "value" : "home"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_home"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Home_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2468-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_home"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=1)", "@pytest.mark.xfail(condition=True, reason='标记为预期失败')", "home" ]
+  },
+  "source" : "ca398e7514c9b713.json",
+  "parameterValues" : [ ]
+}

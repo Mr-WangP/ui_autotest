@@ -1,0 +1,207 @@
+{
+  "uid" : "c0d1942ea3cec4aa",
+  "name" : "test_blog_page_case1",
+  "fullName" : "test_dir.test_blog_home.Test_Home_Blog#test_blog_page_case1",
+  "historyId" : "a544c5b25934a1ee148cb11a457e89c0",
+  "time" : {
+    "start" : 1645858783322,
+    "stop" : 1645858783619,
+    "duration" : 297
+  },
+  "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园首页页面测试\n    步骤：\n    1、打开博客园页面\n    2、检查首页页面\n    检查点：\n    * 检查首页页面是否包含关键字。\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858780942,
+      "duration" : 2077
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1645858780942,
+      "stop" : 1645858780942,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园首页页面测试\n        步骤：\n        1、打开博客园页面\n        2、检查首页页面\n        检查点：\n        * 检查首页页面是否包含关键字。\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "打开url",
+      "time" : {
+        "start" : 1645858783323,
+        "stop" : 1645858783601,
+        "duration" : 278
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "等待首页页面显示",
+      "time" : {
+        "start" : 1645858783601,
+        "stop" : 1645858783616,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "判断显示是否正确",
+      "time" : {
+        "start" : 1645858783616,
+        "stop" : 1645858783619,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "da35cc15a5a2c827",
+      "name" : "log",
+      "source" : "da35cc15a5a2c827.txt",
+      "type" : "text/plain",
+      "size" : 402
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1645858816129,
+      "stop" : 1645858818257,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "首页页面显示测试"
+  }, {
+    "name" : "feature",
+    "value" : "博客园首页测试"
+  }, {
+    "name" : "tag",
+    "value" : "home"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=2)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_home"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Home_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2468-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_home"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=2)", "home" ]
+  },
+  "source" : "c0d1942ea3cec4aa.json",
+  "parameterValues" : [ ]
+}

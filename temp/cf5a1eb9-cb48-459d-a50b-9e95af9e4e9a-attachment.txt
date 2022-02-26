@@ -1,0 +1,26 @@
+INFO     logger:base_page.py:35 ✅ 打开url：https://account.cnblogs.com/
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+INFO     logger:base_page.py:236 ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：aaa123
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：aaabbb
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+INFO     logger:base_page.py:128 ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+ERROR    logger:base_page.py:66 ❌ 查找不到元素: xpath=//*[text()="用户名或密码错误"] 
+ERROR    logger:base_page.py:240 ❌ 元素未显示：xpath=//*[text()="用户名或密码错误"]
+INFO     logger:base_page.py:35 ✅ 打开url：https://account.cnblogs.com/
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+INFO     logger:base_page.py:236 ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：aaa123
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：aaabbb
+INFO     logger:base_page.py:62 ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+INFO     logger:base_page.py:128 ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+ERROR    logger:base_page.py:66 ❌ 查找不到元素: xpath=//*[text()="用户名或密码错误"] 
+ERROR    logger:base_page.py:240 ❌ 元素未显示：xpath=//*[text()="用户名或密码错误"]

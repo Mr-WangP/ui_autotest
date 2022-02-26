@@ -1,0 +1,192 @@
+{
+  "uid" : "913e3b8717bf1564",
+  "name" : "test_blog_login_case2[args1]",
+  "fullName" : "test_dir.test_blog_search.Test_Search_Blog#test_blog_login_case2",
+  "historyId" : "8ef77d236fe44f3d8158b837e2cc35b1",
+  "time" : {
+    "start" : 1645858815488,
+    "stop" : 1645858816128,
+    "duration" : 640
+  },
+  "description" : "\n        名称：博客园搜索测试\n        步骤：\n        1、打开博客园搜索页面\n        2、输入搜索文本\n        5、点击搜索按钮\n        检查点：\n        * 检查是否进行搜索。\n        ",
+  "descriptionHtml" : "<pre><code>    名称：博客园搜索测试\n    步骤：\n    1、打开博客园搜索页面\n    2、输入搜索文本\n    5、点击搜索按钮\n    检查点：\n    * 检查是否进行搜索。\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858780942,
+      "duration" : 2077
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_close",
+    "time" : {
+      "start" : 1645858780942,
+      "stop" : 1645858780942,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1645858778865,
+      "stop" : 1645858778865,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        名称：博客园搜索测试\n        步骤：\n        1、打开博客园搜索页面\n        2、输入搜索文本\n        5、点击搜索按钮\n        检查点：\n        * 检查是否进行搜索。\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "进行搜索操作",
+      "time" : {
+        "start" : 1645858815489,
+        "stop" : 1645858816113,
+        "duration" : 624
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "检查搜索结果",
+      "time" : {
+        "start" : 1645858816113,
+        "stop" : 1645858816128,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "f81b2c546265c8e9",
+      "name" : "log",
+      "source" : "f81b2c546265c8e9.txt",
+      "type" : "text/plain",
+      "size" : 866
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "browser_close::0",
+    "time" : {
+      "start" : 1645858816129,
+      "stop" : 1645858818257,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "博客园搜索功能测试"
+  }, {
+    "name" : "story",
+    "value" : "搜索测试"
+  }, {
+    "name" : "tag",
+    "value" : "search"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_dir"
+  }, {
+    "name" : "suite",
+    "value" : "test_blog_search"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Search_Blog"
+  }, {
+    "name" : "host",
+    "value" : "WP"
+  }, {
+    "name" : "thread",
+    "value" : "2468-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_dir.test_blog_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "args",
+    "value" : "{'txt': 'Appium'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "search" ]
+  },
+  "source" : "913e3b8717bf1564.json",
+  "parameterValues" : [ "{'txt': 'Appium'}" ]
+}

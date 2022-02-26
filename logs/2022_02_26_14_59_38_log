@@ -1,0 +1,85 @@
+2022-02-26-14:59:38 run_tests.py run INFO 测试开始执行！
+2022-02-26-14:59:42 base_page.py open INFO ✅ 打开url：https://www.cnblogs.com/
+2022-02-26-14:59:42 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='navbar_login_status']/a[4] 
+2022-02-26-14:59:42 base_page.py get_display INFO ✅ 元素已显示：xpath=//*[@id='navbar_login_status']/a[4] 
+2022-02-26-14:59:43 base_page.py open INFO ✅ 打开url：https://www.cnblogs.com/
+2022-02-26-14:59:43 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='navbar_login_status']/a[4] 
+2022-02-26-14:59:43 base_page.py get_display INFO ✅ 元素已显示：xpath=//*[@id='navbar_login_status']/a[4] 
+2022-02-26-14:59:43 test_blog_home.py test_blog_page_case1 INFO ✅ 断言成功：博客园 - 开发者的网上家园 == "博客园 - 开发者的网上家园"
+2022-02-26-14:59:44 base_page.py open INFO ✅ 打开url：https://account.cnblogs.com/
+2022-02-26-14:59:44 base_page.py get_element INFO ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:44 base_page.py get_display INFO ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:44 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+2022-02-26-14:59:44 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:44 base_page.py send_value INFO ✅ 输入框输入的内容为：123456
+2022-02-26-14:59:44 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+2022-02-26-14:59:44 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:44 base_page.py send_value INFO ✅ 输入框输入的内容为：123456
+2022-02-26-14:59:44 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:44 base_page.py click INFO ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:46 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-14:59:46 base_page.py get_display INFO ✅ 元素已显示：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-14:59:46 test_blog_login.py test_blog_login_case2 INFO ✅ 断言成功：页面显示错误用户名或密码提示
+2022-02-26-14:59:46 base_page.py open INFO ✅ 打开url：https://account.cnblogs.com/
+2022-02-26-14:59:46 base_page.py get_element INFO ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:46 base_page.py get_display INFO ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:46 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+2022-02-26-14:59:47 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:47 base_page.py send_value INFO ✅ 输入框输入的内容为：aaa666
+2022-02-26-14:59:47 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+2022-02-26-14:59:47 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:47 base_page.py send_value INFO ✅ 输入框输入的内容为：aaabbb
+2022-02-26-14:59:47 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:47 base_page.py click INFO ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:47 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-14:59:47 base_page.py get_display INFO ✅ 元素已显示：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-14:59:47 test_blog_login.py test_blog_login_case2 INFO ✅ 断言成功：页面显示错误用户名或密码提示
+2022-02-26-14:59:48 base_page.py open INFO ✅ 打开url：https://account.cnblogs.com/
+2022-02-26-14:59:48 base_page.py get_element INFO ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:48 base_page.py get_display INFO ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-14:59:48 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+2022-02-26-14:59:48 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:48 base_page.py send_value INFO ✅ 输入框输入的内容为：aaa123
+2022-02-26-14:59:48 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+2022-02-26-14:59:48 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-14:59:48 base_page.py send_value INFO ✅ 输入框输入的内容为：aaabbb
+2022-02-26-14:59:48 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:48 base_page.py click INFO ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-14:59:59 base_page.py get_element ERROR ❌ 查找不到元素: xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-14:59:59 base_page.py get_display ERROR ❌ 元素未显示：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-15:00:01 base_page.py open INFO ✅ 打开url：https://account.cnblogs.com/
+2022-02-26-15:00:01 base_page.py get_element INFO ✅ 查找到元素：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-15:00:01 base_page.py get_display INFO ✅ 元素已显示：xpath=//app-sign-in-up-page-title/h1 
+2022-02-26-15:00:01 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-0'] 
+2022-02-26-15:00:01 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-15:00:02 base_page.py send_value INFO ✅ 输入框输入的内容为：aaa123
+2022-02-26-15:00:02 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id='mat-input-1'] 
+2022-02-26-15:00:02 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-15:00:02 base_page.py send_value INFO ✅ 输入框输入的内容为：aaabbb
+2022-02-26-15:00:02 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-15:00:02 base_page.py click INFO ✅ 点击元素：xpath=//*[@fxlayout='column']/button 
+2022-02-26-15:00:13 base_page.py get_element ERROR ❌ 查找不到元素: xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-15:00:13 base_page.py get_display ERROR ❌ 元素未显示：xpath=//*[text()="用户名或密码错误"] 
+2022-02-26-15:00:13 base_page.py open INFO ✅ 打开url：https://zzk.cnblogs.com/
+2022-02-26-15:00:13 base_page.py get_element INFO ✅ 查找到元素：id=w 
+2022-02-26-15:00:13 base_page.py get_display INFO ✅ 元素已显示：id=w 
+2022-02-26-15:00:13 base_page.py get_element INFO ✅ 查找到元素：id=w 
+2022-02-26-15:00:13 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-15:00:13 base_page.py send_value INFO ✅ 输入框输入的内容为：selenium
+2022-02-26-15:00:13 base_page.py get_element INFO ✅ 查找到元素：id=search_btn 
+2022-02-26-15:00:14 base_page.py click INFO ✅ 点击元素：id=search_btn 
+2022-02-26-15:00:15 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id="searchResult"]/div[2]/div[1]/h3/a 
+2022-02-26-15:00:15 base_page.py get_text INFO ✅ 获取元素的文本为：java selenium (一) selenium 介绍
+2022-02-26-15:00:15 test_blog_search.py test_blog_login_case2 INFO ✅ 断言成功：成功搜索java selenium (一) selenium 介绍
+2022-02-26-15:00:15 base_page.py open INFO ✅ 打开url：https://zzk.cnblogs.com/
+2022-02-26-15:00:15 base_page.py get_element INFO ✅ 查找到元素：id=w 
+2022-02-26-15:00:15 base_page.py get_display INFO ✅ 元素已显示：id=w 
+2022-02-26-15:00:15 base_page.py get_element INFO ✅ 查找到元素：id=w 
+2022-02-26-15:00:15 base_page.py send_value INFO ✅ 清除输入框的内容 
+2022-02-26-15:00:15 base_page.py send_value INFO ✅ 输入框输入的内容为：Appium
+2022-02-26-15:00:15 base_page.py get_element INFO ✅ 查找到元素：id=search_btn 
+2022-02-26-15:00:16 base_page.py click INFO ✅ 点击元素：id=search_btn 
+2022-02-26-15:00:16 base_page.py get_element INFO ✅ 查找到元素：xpath=//*[@id="searchResult"]/div[2]/div[1]/h3/a 
+2022-02-26-15:00:16 base_page.py get_text INFO ✅ 获取元素的文本为：Appium移动自动化测试（一）--安装Appium
+2022-02-26-15:00:16 test_blog_search.py test_blog_login_case2 INFO ✅ 断言成功：成功搜索Appium移动自动化测试（一）--安装Appium
+2022-02-26-15:00:20 run_tests.py run INFO 运行结束，生成测试报告！
