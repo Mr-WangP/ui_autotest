@@ -7,60 +7,63 @@
 """
 此文件为selenium常用方法二次封装文件
 """
-import os
-from selenium.webdriver.common.action_chains import ActionChains  # 处理鼠标事件(高级操作)
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
-from conftest import log
-
-base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-os.sys.path.insert(0, base_path)
+from logs.log import log
 
 
 class BasePage(object):
     """
     selenium框架的主要类
     """
+
     # 初始化基础类
-    def __init__(self, driver, url=None):
+    def __init__(self, driver):
         self.driver = driver
-        self.url = url if url else getattr(self.driver, 'url', None)
         self.driver.implicitly_wait(5)
 
-    def open(self, url=None):
+    def open(self, url):
         """
         打开url
+        :param url:
+        :return:
         """
         try:
-            url = url if url else self.url
             self.driver.get(url)
-            log().info("成功打开url：{}".format(url))
-        except:
-            log().error("打开url：{}失败".format(url))
-            return False
+            log().info("✅ 打开url：{}".format(url))
+        except Exception as e:
+            log().error("❌ 打开url：{}失败".format(url))
+            return e
 
     def get_url(self):
         """
         获取当前页面的URL地址.
+        :return:
         """
         try:
-            uri = self.driver.current_url
-            log().info("成功获取当前页面url：{}".format(uri))
-            return uri
-        except:
-            log().error("获取当前页面url失败")
-            return False
+            current_url = self.driver.current_url
+            log().info("✅ 获取当前页面url为：{}".format(self.driver.current_url))
+            return current_url
+        except Exception as e:
+            log().error("❌ 获取当前页面url失败")
+            return e
 
     def get_element(self, loc, timeout=10):
         """
-        显示等待，并判断元素定位方式，并返回元素
+        显示等待，并判断元素定位方式，并返回元素对象
+        :param loc: 元素定位
+        :param timeout: 超时时间
+        :return:
         """
         try:
-            element = WebDriverWait(self.driver, timeout, 0.5).until(lambda x:x.find_element(*loc))
-            log().info("成功查找元素：{}".format(loc))
-            return element
+            el = WebDriverWait(self.driver, timeout, 0.5).until(lambda x: x.find_element(*loc))
+            log().info("✅ 查找到元素：{by}={value} ".format(by=loc[0], value=loc[1]))
+            return el
         except Exception as e:
-            log().error("元素：{}查找不到".format(loc))
+            error_msg = "❌ 查找不到元素: {by}={value} ".format(by=loc[0], value=loc[1])
+            log().error(error_msg)
             return e
 
     def max_window(self):
@@ -68,83 +71,118 @@ class BasePage(object):
         设置浏览器最大化.
         """
         self.driver.maximize_window()
+        log().info("✅ 最大化浏览器")
 
     def set_window(self, wide, high):
         """
         设置浏览器窗口宽和高.
         """
         self.driver.set_window_size(wide, high)
+        log().info("✅ 设置浏览器宽高为：{}×{} ".format(wide, high))
 
     def clear(self, loc):
         """
         清除输入框的内容.
+        :param loc: 输入框元素定位
+        :return:
         """
         el = self.get_element(loc)
         el.clear()
+        log().info("✅ 清除输入框的内容 ")
 
     def send_value(self, loc, text):
         """
         操作输入框.
+        :param loc: 输入框元素定位
+        :param text: 输入文本
+        :return:
         """
-        el = self.get_element(loc)
-        el.clear()
-        el.send_keys(text)
+        try:
+            el = self.get_element(loc)
+            el.clear()
+            log().info("✅ 清除输入框的内容 ")
+            el.send_keys(text)
+            log().info("✅ 输入框输入的内容为：{}".format(text))
+        except Exception as e:
+            error_msg = "❌ 未能正确向输入框输入文本: {} ".format(text)
+            log().error(error_msg)
+            return e
 
     def get_text(self, loc):
         """
         获取元素文本
         :return:
         """
-        return self.get_element(loc).text
+        el = self.get_element(loc).text
+        log().info("✅ 获取元素的文本为：{}".format(el))
+        return el
 
     def click(self, loc):
         """
-        可以点击任何文本/图像
-        链接，复选框，单选按钮，甚至下拉框等等..
+        可以点击任何文本/图像，包括链接，复选框，单选按钮，甚至下拉框等等..
+        :param loc: 元素定位
+        :return:
         """
         el = self.get_element(loc)
         el.click()
+        log().info("✅ 点击元素：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def right_click(self, loc):
         """
         右键单击元素.
+        :param loc: 元素定位
+        :return:
         """
         el = self.get_element(loc)
         ActionChains(self.driver).context_click(el).perform()
+        log().info("✅ 右键单击元素：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def move_to_element(self, loc):
         """
         鼠标移到元素（悬停）
+        :param loc: 元素定位
+        :return:
         """
         el = self.get_element(loc)
         ActionChains(self.driver).move_to_element(el).perform()
+        log().info("✅ 鼠标移到元素（悬停）：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def double_click(self, loc):
         """
         双击元素
+        :param loc:
+        :return:
         """
         el = self.get_element(loc)
         ActionChains(self.driver).double_click(el).perform()
+        log().info("✅ 双击元素：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def drag_and_drop(self, start_loc, target_loc):
         """
         把一个元素拖到一定的距离，然后把它放下
+        :param start_loc: 元素起始位置
+        :param target_loc: 元素停止位置
+        :return:
         """
         start = self.get_element(start_loc)
         target = self.get_element(target_loc)
         ActionChains(self.driver).drag_and_drop(start, target).perform()
+        log().info("✅ 把元素从{by1}={value1}拖拽到{by2}={value2}放下 ".format(
+            by1=start_loc[0], value1=start_loc[1], by2=target_loc[0], value2=target_loc[1]))
 
     def close(self):
         """
         模拟用户在弹出框的标题栏中点击“关闭”按钮窗口
         """
         self.driver.close()
+        log().info("✅ 关闭浏览器当前窗口")
 
     def quit(self):
         """
         退出使用的所有窗口.
         """
         self.driver.quit()
+        log().info("✅ 关闭浏览器所有窗口")
 
     def submit(self, loc):
         """
@@ -152,45 +190,71 @@ class BasePage(object):
         """
         el = self.get_element(loc)
         el.submit()
+        log().info("✅ 提交指定的表单：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def refresh(self):
         """
         刷新当前页面.
         """
         self.driver.refresh()
+        log().info("✅ 刷新当前页面 ")
 
     def js(self, script):
         """
         执行JavaScript脚本.
         用法: driver.js("window.scrollTo(200,1000);")
+        :param script: JavaScript脚本
+        :return:
         """
-        self.driver.execute_script(script)
+        try:
+            self.driver.execute_script(script)
+            log().info("✅ 执行js脚本：{} ".format(script))
+        except Exception as e:
+            error_msg = "❌ 未能正确执行js脚本：{} ".format(script)
+            log().error(error_msg)
+            return e
 
     def get_attribute(self, loc, attribute):
         """
         获取元素属性的值
+        :param loc: 元素定位
+        :param attribute: 元素属性
+        :return:
         """
         el = self.get_element(loc)
-        return el.get_attribute(attribute)
+        el_attribute = el.get_attribute(attribute)
+        log().info("✅ 获取元素{value1}属性的值：{value2} ".format(value1=attribute, value2=el_attribute))
+        return el_attribute
 
     def get_display(self, loc):
         """
         获取元素是否显示，返回结果为真或假
         """
-        el = self.get_element(loc)
-        return el.is_displayed()
+        try:
+            el = self.get_element(loc)
+            el_play = el.is_displayed()
+            log().info("✅ 元素已显示：{by}={value} ".format(by=loc[0], value=loc[1]))
+            return el_play
+        except Exception as e:
+            error_msg = "❌ 元素未显示：{by}={value} ".format(by=loc[0], value=loc[1])
+            log().error(error_msg)
+            return e
 
     def get_title(self):
         """
         得到窗口标题.
         """
-        return self.driver.title
+        title = self.driver.title
+        log().info("✅ 当前窗口标题为：{} ".format(title))
+        return title
 
     def get_alert_text(self):
         """
         得到弹框的文本.
         """
-        return self.driver.switch_to.alert.text
+        text = self.driver.switch_to.alert.text
+        log().info("✅ 弹框的文本为：{} ".format(text))
+        return text
 
     def wait(self, secs=10):
         """
@@ -203,25 +267,29 @@ class BasePage(object):
         接受警告框
         """
         self.driver.switch_to.alert.accept()
+        log().info("✅ 确认弹框 ")
 
     def dismiss_alert(self):
         """
         忽略弹框
         """
         self.driver.switch_to.alert.dismiss()
+        log().info("✅ 取消弹框 ")
 
     def switch_to_frame(self, loc):
         """
-        切换到指定的frame.
+        切换到指定的iframe.
         """
         iframe_el = self.get_element(loc)
         self.driver.switch_to.frame(iframe_el)
+        log().info("✅ 切换到指定的iframe：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def switch_to_frame_out(self):
         """
-        返回默认frame
+        返回默认iframe
         """
         self.driver.switch_to.default_content()
+        log().info("✅ 返回默认iframe ")
 
     def open_new_window(self, loc):
         """
@@ -234,12 +302,14 @@ class BasePage(object):
         for handle in all_handles:
             if handle != original_window:
                 self.driver.switch_to.window(handle)
+        log().info("✅ 打开新窗口并切换到指定的窗口：{by}={value} ".format(by=loc[0], value=loc[1]))
 
     def get_screen_shot(self, file_path):
         """
         将当前窗口的屏幕截图保存到图像文件中.
         """
         self.driver.get_screenshot_as_file(file_path)
+        log().info("✅ 将当前窗口的屏幕截图保存到图像文件中：{} ".format(file_path))
 
     def select_value(self, loc, value):
         """
@@ -247,6 +317,7 @@ class BasePage(object):
         """
         el = self.get_element(loc)
         Select(el).select_by_value(value)
+        log().info("✅ 通过value值选择多选框：{} ".format(value))
 
     def select_index(self, loc, index):
         """
@@ -254,6 +325,15 @@ class BasePage(object):
         """
         el = self.get_element(loc)
         Select(el).select_by_index(index)
+        log().info("✅ 通过index值选择多选框：{} ".format(index))
+
+    def select_text(self, loc, text):
+        """
+        多选框，通过text文本值选择
+        """
+        el = self.get_element(loc)
+        Select(el).select_by_visible_text(text)
+        log().info("✅ 通过text文本值选择多选框：{} ".format(text))
 
     def window_scroll_to(self, left='0', top='0'):
         """
@@ -268,3 +348,4 @@ class BasePage(object):
         """
         scroll = "window.scrollTo(%s, %s);" % (left, top)
         self.js(scroll)
+        log().info("✅ 控制浏览器向右滑动{}，向下滑动{} ".format(left, top))

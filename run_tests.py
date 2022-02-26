@@ -5,9 +5,9 @@
 # @File: run_tests.py
 
 import os
-from conftest import log
 import pytest
 from config import RunConfig
+from logs.log import log
 
 '''
 说明：
@@ -15,6 +15,7 @@ from config import RunConfig
 2、运行方式：
   > python run_tests.py
 '''
+
 
 def run():
 

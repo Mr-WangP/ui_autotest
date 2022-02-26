@@ -1,11 +1,18 @@
-# coding=utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Author: wp
+# @Time: 2021/6/26 18:24
+# @File: blog_page.py
 from selenium.webdriver.common.by import By
 from base.base_page import BasePage
+from config import RunConfig
 
 
 class BlogPage(BasePage):
 
-    # 获取关联元素
+    # 页面url
+    url = RunConfig.uri
+    # 获取页面关联元素
     login_element = (By.XPATH, "//*[@id='navbar_login_status']/a[5]")
     regist_element = (By.XPATH, "//*[@id='navbar_login_status']/a[4]")
     home_element = (By.XPATH, "//*[@id='nav_left']/li[2]/a")

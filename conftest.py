@@ -6,24 +6,11 @@
 
 import os
 import pytest
-import logging
-import time
 import allure
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as CH_Options
 from selenium.webdriver.firefox.options import Options as FF_Options
 from config import RunConfig
-
-# 项目目录配置
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-REPORT_DIR = os.path.join(BASE_DIR, "report", "")
-LOG_DIR = os.path.join(BASE_DIR, "log", "")
-
-
-# 定义基本测试环境
-@pytest.fixture(scope='function')
-def base_url():
-    return RunConfig.url
 
 
 # 启动浏览器
@@ -34,6 +21,19 @@ def browser():
     :return:
     """
     global driver
+
+    # try:
+    #     if RunConfig.driver_type == "chrome":
+    #         # 添加log
+    #         driver = webdriver.Chrome(options=chrome_options)
+    #     else:
+    #         # 添加log
+    #         driver = getattr(webdriver, RunConfig.driver_type)()
+    # except Exception as e:
+    #     # 添加log
+    #     print(e)
+    #     driver = webdriver.Chrome()
+    # return driver
 
     if RunConfig.driver_type == "chrome":
         # 本地chrome浏览器
@@ -85,43 +85,32 @@ def browser_close():
     print("test end!")
 
 
-def log():
-    # 创建一个日志器
-    logger = logging.getLogger('logger')
-    # 设置日志输出最低等级，低于当前等级就会忽略
-    logger.setLevel(logging.INFO)
-    if not logger.handlers:
-        # 创建处理器
-        sh = logging.StreamHandler()
-        fh = logging.FileHandler(filename='{}\\{}_log'.format(
-            LOG_DIR, time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime())), encoding='utf-8')
-        # 创建一个格式器
-        formator = logging.Formatter(fmt='%(asctime)s %(filename)s %(levelname)s %(message)s',
-                                     datefmt='%Y/%m/%d/%X')
-        sh.setFormatter(formator)
-        fh.setFormatter(formator)
-        logger.addHandler(sh)
-        logger.addHandler(fh)
-
-    return logger
-
-
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    '''
-    失败截图
-    '''
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """
+    失败用例截图
+    :param item:测试用例
+    :return:
+    """
     outcome = yield
-    rep = outcome.get_result()
+    report = outcome.get_result()
+    # 仅仅获取用例call 执行结果是失败的情况, 不包含 setup/teardown
+    if report.when == 'call' or report.when == "setup":
+        xfail = hasattr(report, 'wasxfail')
+        if (report.skipped and xfail) or (report.failed and not xfail):
+            with allure.step('添加失败截图...'):
+                allure.attach(driver.get_screenshot_as_png(), "失败截图", allure.attachment_type.PNG)
 
-    if rep.when == "call" and rep.failed:
-        mode = "a" if os.path.exists("failures") else "w"
-        with open("failures", mode) as f:
-
-            if "tmpdir" in item.fixturenames:
-                extra = " (%s)" % item.funcargs["tmpdir"]
-            else:
-                extra = ""
-            f.write(rep.nodeid + extra + "\n")
-        with allure.step('添加失败截图...'):
-            allure.attach(driver.get_screenshot_as_png(), "失败截图", allure.attachment_type.PNG)
+    # if rep.when == "call" and rep.failed:
+    #     mode = "a" if os.path.exists("failures") else "w"
+    #     with open("failures", mode) as f:
+    #         if "tmpdir" in item.fixturenames:
+    #             extra = " (%s)" % item.funcargs["tmpdir"]
+    #         else:
+    #             extra = ""
+    #         f.write(rep.nodeid + extra + "\n")
+    #     with allure.step('添加失败截图...'):
+    #         allure.attach(
+    #             driver.get_screenshot_as_png(),
+    #             "失败截图",
+    #             allure.attachment_type.PNG)
