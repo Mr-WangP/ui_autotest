@@ -1,0 +1,28 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+        名称：百度搜索测试
+        步骤：
+        1、打开百度搜索页面
+        2、输入搜索文本
+        5、点击搜索按钮
+        检查点：
+        * 检查是否进行搜索。
+        ","2187","test_search[args1]","test_dir","Sat Aug 24 00:32:45 CST 2024","passed","Sat Aug 24 00:32:47 CST 2024","Test_Search_Blog","test_search","",""
+"
+        名称：百度搜索测试
+        步骤：
+        1、打开百度搜索页面
+        2、输入搜索文本
+        5、点击搜索按钮
+        检查点：
+        * 检查是否进行搜索。
+        ","2181","test_search[args2]","test_dir","Sat Aug 24 00:32:47 CST 2024","passed","Sat Aug 24 00:32:49 CST 2024","Test_Search_Blog","test_search","",""
+"
+        名称：百度搜索测试
+        步骤：
+        1、打开百度搜索页面
+        2、输入搜索文本
+        5、点击搜索按钮
+        检查点：
+        * 检查是否进行搜索。
+        ","3539","test_search[args0]","test_dir","Sat Aug 24 00:32:41 CST 2024","passed","Sat Aug 24 00:32:45 CST 2024","Test_Search_Blog","test_search","",""

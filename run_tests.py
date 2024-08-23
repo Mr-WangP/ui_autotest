@@ -7,7 +7,7 @@
 import os
 import pytest
 from config import RunConfig
-from logs.log import log
+from utils.logUtils.logControl import log
 
 '''
 说明：
@@ -20,14 +20,18 @@ from logs.log import log
 def run():
 
     log().info("测试开始执行！")
-    pytest.main(["-vs", RunConfig.cases_path,
-                 "--alluredir", './temp/',
-                 "--clean-alluredir",
-                 "--maxfail", RunConfig.max_fail,
-                 "--reruns", RunConfig.rerun,
-                 "--reruns-delay", "2"])
+    pytest.main(
+        [
+            "-vs", RunConfig.cases_path,
+            "--alluredir", './report/temp/',
+            "--clean-alluredir",
+            "--maxfail", RunConfig.max_fail,
+            "--reruns", RunConfig.rerun,
+            "--reruns-delay", "2"
+        ]
+    )
 
-    os.system('allure generate ./temp/ -o ./report/ --clean')
+    os.system('allure generate ./report/temp/ -o ./report/html/ --clean')
     log().info("运行结束，生成测试报告！")
 
 

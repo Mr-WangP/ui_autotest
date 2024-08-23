@@ -7,11 +7,11 @@
 """
 此文件为selenium常用方法二次封装文件
 """
-from selenium import webdriver
+from time import sleep
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
-from logs.log import log
+from utils.logUtils.logControl import log
 
 
 class BasePage(object):
@@ -256,11 +256,11 @@ class BasePage(object):
         log().info("✅ 弹框的文本为：{} ".format(text))
         return text
 
-    def wait(self, secs=10):
+    def wait(self, t=3):
         """
-        隐式等待，页面上的所有元素
+        强制等待
         """
-        self.driver.implicitly_wait(secs)
+        sleep(t)
 
     def accept_alert(self):
         """

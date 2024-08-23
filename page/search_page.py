@@ -12,18 +12,16 @@ from config import RunConfig
 class SearchPage(BasePage):
 
     # 页面url
-    url = "https://zzk.cnblogs.com/"
+    url = RunConfig.uri + '/'
     # 获取页面关联元素
-    input_element = (By.ID, "w")
-    search_button_element = (By.ID, "search_btn")
-    result_element = (By.XPATH, '//*[@id="searchResult"]/div[2]/div[1]/h3/a')
+    input_el = (By.ID, "kw")
+    search_button_el = (By.ID, "su")
 
     # 元素操作进行封装
     def search(self, args):
         # 进入搜索页面
         self.open(self.url)
-        self.get_display(self.input_element)
         # '输入搜索文本内容'
-        self.send_value(self.input_element, args['txt'])
+        self.send_value(self.input_el, args['txt'])
         # '点击找一下按钮'
-        self.click(self.search_button_element)
+        self.click(self.search_button_el)

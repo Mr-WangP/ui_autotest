@@ -1,0 +1,9 @@
+INFO     logger:conftest.py:59 创建默认Chrome浏览器
+INFO     logger:base_page.py:35 ✅ 打开url：https://www.baidu.com//
+INFO     logger:base_page.py:62 ✅ 查找到元素：id=kw 
+INFO     logger:base_page.py:103 ✅ 清除输入框的内容 
+INFO     logger:base_page.py:105 ✅ 输入框输入的内容为：selenium
+INFO     logger:base_page.py:62 ✅ 查找到元素：id=su 
+INFO     logger:base_page.py:128 ✅ 点击元素：id=su 
+INFO     logger:base_page.py:248 ✅ 当前窗口标题为：selenium_百度搜索 
+INFO     logger:test_search.py:39 ✅ 断言成功：成功搜索selenium

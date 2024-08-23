@@ -1,0 +1,36 @@
+2024-08-24-00:32:40 run_tests.py run INFO 测试开始执行！
+2024-08-24-00:32:41 conftest.py browser INFO 创建默认Chrome浏览器
+2024-08-24-00:32:41 base_page.py open INFO ✅ 打开url：https://www.baidu.com//
+2024-08-24-00:32:41 base_page.py get_element INFO ✅ 查找到元素：id=kw 
+2024-08-24-00:32:41 base_page.py send_value INFO ✅ 清除输入框的内容 
+2024-08-24-00:32:41 base_page.py send_value INFO ✅ 输入框输入的内容为：selenium
+2024-08-24-00:32:41 base_page.py get_element INFO ✅ 查找到元素：id=su 
+2024-08-24-00:32:43 base_page.py click INFO ✅ 点击元素：id=su 
+2024-08-24-00:32:45 base_page.py get_title INFO ✅ 当前窗口标题为：selenium_百度搜索 
+2024-08-24-00:32:45 test_search.py test_search INFO ✅ 断言成功：成功搜索selenium
+2024-08-24-00:32:45 base_page.py open INFO ✅ 打开url：https://www.baidu.com//
+2024-08-24-00:32:45 base_page.py get_element INFO ✅ 查找到元素：id=kw 
+2024-08-24-00:32:45 base_page.py send_value INFO ✅ 清除输入框的内容 
+2024-08-24-00:32:45 base_page.py send_value INFO ✅ 输入框输入的内容为：Appium
+2024-08-24-00:32:45 base_page.py get_element INFO ✅ 查找到元素：id=su 
+2024-08-24-00:32:45 base_page.py click INFO ✅ 点击元素：id=su 
+2024-08-24-00:32:47 base_page.py get_title INFO ✅ 当前窗口标题为：Appium_百度搜索 
+2024-08-24-00:32:47 test_search.py test_search INFO ✅ 断言成功：成功搜索Appium
+2024-08-24-00:32:47 base_page.py open INFO ✅ 打开url：https://www.baidu.com//
+2024-08-24-00:32:47 base_page.py get_element INFO ✅ 查找到元素：id=kw 
+2024-08-24-00:32:47 base_page.py send_value INFO ✅ 清除输入框的内容 
+2024-08-24-00:32:47 base_page.py send_value INFO ✅ 输入框输入的内容为：test
+2024-08-24-00:32:47 base_page.py get_element INFO ✅ 查找到元素：id=su 
+2024-08-24-00:32:47 base_page.py click INFO ✅ 点击元素：id=su 
+2024-08-24-00:32:49 base_page.py get_title INFO ✅ 当前窗口标题为：test_百度搜索 
+2024-08-24-00:32:49 test_search.py test_search INFO ✅ 断言成功：成功搜索test
+2024-08-24-00:32:49 conftest.py browser INFO 测试结束，关闭浏览器
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary INFO 成功用例数: 3
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary ERROR 异常用例数: 0
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary ERROR 失败用例数: 0
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary WARNING 跳过用例数: 0
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary WARNING 预期失败用例数: 0
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary WARNING 预期成功用例数: 0
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary INFO 用例执行时长: 11.18s
+2024-08-24-00:32:51 conftest.py pytest_terminal_summary INFO 用例成功率: 100.00%
+2024-08-24-00:32:53 run_tests.py run INFO 运行结束，生成测试报告！
